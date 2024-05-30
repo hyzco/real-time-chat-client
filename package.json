@@ -1,18 +1,26 @@
 {
-  "name": "ws_server",
-  "version": "0.0.1",
-  "description": "websocket server",
-  "type": "module",
-  "main": "main.js",
+  "name": "ws_client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "type": "commonjs",
   "scripts": {
+    "dev": "nodemon -e ts --watch src .env --exec \"tsc --incremental && ts-node src/client.ts\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ws": "^8.16.0"
+    "commander": "^12.0.0",
+    "nanoid": "^5.0.6",
+    "prompt-sync": "^4.2.0",
+    "socket.io-client": "^4.7.5"
   },
-  "optionalDependencies": {
-    "bufferutil": "^4.0.8"
+  "devDependencies": {
+    "@types/node": "^20.11.28",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
   }
 }
